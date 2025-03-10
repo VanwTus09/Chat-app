@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const session = require("cookie-session");
 const passport = require("passport");
 require("dotenv").config();
+const connectDB = require("./config/db");
 require("./config/passport");
 
 const authRoutes = require("./routes/Authroutes")
 
 const app = express();
+
+connectDB();
 
 // Middleware
 app.use(express.json());
