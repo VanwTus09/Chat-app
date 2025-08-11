@@ -59,9 +59,6 @@
 
 Clone the project
 ```bash
-# Clone the repository
-git clone https://github.com/hoangthh/social-media-app.git
-```
 
 Create .env file for frontend and backend (**Required**)
 - Frontend .env at /social-media-app/client
