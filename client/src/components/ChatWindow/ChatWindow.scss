@@ -1,0 +1,110 @@
+@import "../../mixin.scss";
+
+.chat-window {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 320px;
+  height: 450px;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  @include respond("sm") {
+    right: 10px;
+  }
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &--header {
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #dadada;
+
+    &.unread {
+      background: linear-gradient(
+        #aa00ff calc(100vh - 455px + 48px),
+        #0070f6 calc(100% - 56px),
+        #0070f6
+      );
+      color: white;
+    }
+
+    &--info {
+      margin-left: 10px;
+      flex: 1;
+
+      &__name {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      &__time {
+        font-size: 12px;
+        font-weight: 350;
+      }
+    }
+  }
+
+  &--body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+
+    &__typing-wrapper {
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-end;
+
+      &.typing-img {
+        margin-left: 10px;
+        width: 50px;
+      }
+    }
+
+    &__read-or-seen {
+      margin-top: 5px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: flex-end;
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &--footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #dadada;
+    position: relative;
+
+    em-emoji-picker {
+      position: absolute;
+      top: -300px;
+      right: -40px;
+      width: 280px;
+      height: 300px;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

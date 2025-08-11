@@ -1,0 +1,9 @@
+.left-nav {
+  position: fixed;
+  top: 60px;
+  margin: 15px 150px 0 10px;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}
