@@ -134,12 +134,7 @@ npm start
 
 ---
 
-## 🧍‍♂️ Author
-Developed by Trần Huy Hoàng <br/>
-GitHub: @hoangthh <br/>
-Email: tranhoang202204@gmail.com
 
----
 
 📄 License
 This project is licensed under the MIT License. See LICENSE for details.
